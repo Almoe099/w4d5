@@ -36,3 +36,31 @@ describe Array do
       end
     end
   end
+
+  describe Array do
+    describe '#two_sum' do
+      context 'when no pairs sum to zero' do
+        it 'returns an empty array' do
+          expect([1, 2, 3].two_sum).to eq([])
+        end
+      end
+
+      context 'when pairs sum to zero' do
+        it 'returns all pairs with smaller indices first' do
+          expect([-1, 0, 2, -2, 1].two_sum).to eq([[0, 4], [2, 3]])
+        end
+      end
+  
+      context 'when array contains zero' do
+        it 'handles zero correctly' do
+          expect([-1, 0, 1, 2].two_sum).to eq([[0, 2]])
+        end
+      end
+  
+      context 'when array is empty' do
+        it 'returns an empty array' do
+          expect([].two_sum).to eq([])
+        end
+      end
+    end
+  end

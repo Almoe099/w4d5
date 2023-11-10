@@ -8,7 +8,16 @@ class Array
     end
 
     def two_sum
-
-    end
-
+        sum = []
+    
+        (0...self.length).each do |i|
+          ((i + 1)...self.length).each do |j|
+            if self[i].is_a?(Numeric) && self[j].is_a?(Numeric) && self[i] + self[j] == 0
+              sum << [i, j]
+            end
+          end
+        end
+    
+        sum.sort_by { |a, b| [a, b] }
+      end
 end
