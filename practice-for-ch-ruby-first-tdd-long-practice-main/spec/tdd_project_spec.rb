@@ -35,9 +35,7 @@ describe Array do
         end
       end
     end
-  end
 
-  describe Array do
     describe '#two_sum' do
       context 'when no pairs sum to zero' do
         it 'returns an empty array' do
@@ -57,10 +55,26 @@ describe Array do
         end
       end
   
-      context 'when array is empty' do
+      context 'when array is empty' do 
         it 'returns an empty array' do
           expect([].two_sum).to eq([])
         end
       end
     end
-  end
+
+    describe "#my_transpose" do 
+      context "when all arrays share the same length" do 
+        it "returns a maxtrix" do 
+          expect([].my_transpose).to eq([])
+        end
+      end
+  
+    end
+
+
+
+
+
+
+
+end
